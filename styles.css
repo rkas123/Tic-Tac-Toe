@@ -1,0 +1,33 @@
+#gameTable td{
+    background-color: beige;
+    border-radius: 6px;
+    border: 2px solid brown;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    font-size: 3rem;
+}
+#gameSpace{
+    transition: 1s;
+}
+#result{
+    text-align: center;
+    display:none;
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 200px;
+    border: 2px solid brown;
+    background-color: beige;
+    border-radius: 10px;
+    margin: auto;
+    animation: drop 1s linear forwards;
+}
+
+@keyframes drop{
+    0% {top: -100%}
+    100%{top:50%}
+}

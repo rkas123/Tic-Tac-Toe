@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="result">
+        <h2></h2>
+        <button id="close">Close</button>
+    </div>
+    <div id="gameSpace">
+    <h1 align="center">Tic Tac Toe</h1>
+    <h2 align="center">Move Player <span id="playerName">X</span></h2>
+    <table id="gameTable" align="center">
+        <tr>
+            <td onclick="clicked(0,0)"></td>
+            <td onclick="clicked(0,1)"></td>
+            <td onclick="clicked(0,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="clicked(1,0)"></td>
+            <td onclick="clicked(1,1)"></td>
+            <td onclick="clicked(1,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="clicked(2,0)"></td>
+            <td onclick="clicked(2,1)"></td>
+            <td onclick="clicked(2,2)"></td>
+        </tr>
+    </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
