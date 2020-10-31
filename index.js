@@ -3,6 +3,7 @@ const resultBar=document.querySelector("#result h2");
 const resultDiv=document.querySelector("#result");
 const closeButton=document.querySelector("#close");
 const gameSpace=document.getElementById("gameSpace");
+const playerName=document.getElementById("playerName");
 var gameParameters={
     user:0,
     move:0
@@ -84,7 +85,9 @@ function showResult(winner)
 }
 function clicked(row,col)
 {
-    gameTable.children[0].children[row].children[col].textContent=(gameParameters.user==1)?'O':'X';
+    let curr=(gameParameters.user==1)?'O':'X';
+    gameTable.children[0].children[row].children[col].textContent=curr;
+    
     if(!check(row,col))
     {
         gameParameters.move++;
@@ -104,4 +107,6 @@ function clicked(row,col)
         gameParameters.move=0;
         clearTable();
     }
+    curr=(gameParameters.user==1)?'O':'X';
+    playerName.textContent=curr;
 }   
