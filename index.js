@@ -81,12 +81,23 @@ function showResult(winner)
     
     resultDiv.style.display="block";
     gameSpace.style.filter="blur(6px)";
-    
+}
+function alert()
+{
+    resultBar.textContent="Cell already occupied. Click Another Cell";
+    resultDiv.style.display="block";
+    gameSpace.style.filter="blur(6px)";
 }
 function clicked(row,col)
 {
     let curr=(gameParameters.user==1)?'O':'X';
-    gameTable.children[0].children[row].children[col].textContent=curr;
+    const selectedCell=gameTable.children[0].children[row].children[col];
+    if(selectedCell.textContent!= " ")
+    {
+        alert();
+        return;
+    }
+    selectedCell.textContent=curr;
     
     if(!check(row,col))
     {
