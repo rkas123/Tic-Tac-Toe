@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    user-select: none;
 }
 canvas{
     transition: 1s;
@@ -9,8 +10,9 @@ canvas{
 }
 #gameTable td{
     background-color: rgba(126,206,253,0.5);
-    border-radius: 6px;
+    border-radius: 10px;
     border: 2px solid #2185C5;
+    
     height: 150px;
     width: 150px;
     text-align: center;
@@ -45,6 +47,18 @@ canvas{
 
 #result h2{
     margin-top: 50px;
+}
+#close{
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    background-color: #3797a4;
+    border: 0px;
+}
+#close:hover{
+    color: #3797a4;
+    background-color: white;
+    border: 1px solid #3797a4;
 }
 @keyframes drop{
     0% {top: -100%}
