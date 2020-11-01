@@ -6,12 +6,15 @@ const gameSpace=document.getElementById("gameSpace");
 const playerName=document.getElementById("playerName");
 var gameParameters={
     user:0,
-    move:0
+    move:0,
+    play:true
 }
 
 closeButton.addEventListener("click",function(){
     resultDiv.style.display="none";
     gameSpace.style.filter="";
+    canvas.style.filter="";
+    gameParameters.play=true;
 })
 
 
@@ -78,18 +81,23 @@ function showResult(winner)
         let win=(winner==0)?"X":"O";
         resultBar.textContent="Game Over " + win + " won!";
     }
-    
+    gameParameters.play=false;
     resultDiv.style.display="block";
     gameSpace.style.filter="blur(6px)";
+    canvas.style.filter="blur(6px)";
 }
 function alert()
 {
+    gameParameters.play=false;
     resultBar.textContent="Cell already occupied. Click Another Cell";
     resultDiv.style.display="block";
     gameSpace.style.filter="blur(6px)";
+    canvas.style.filter="blur(6px)";
 }
 function clicked(row,col)
 {
+    if(gameParameters.play === false)
+        return;
     let curr=(gameParameters.user==1)?'O':'X';
     const selectedCell=gameTable.children[0].children[row].children[col];
     if(selectedCell.textContent!= " ")
