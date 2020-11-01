@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 canvas{
     transition: 1s;
@@ -7,13 +8,14 @@ canvas{
     z-index: -1;
 }
 #gameTable td{
-    background-color: beige;
+    background-color: rgba(126,206,253,0.5);
     border-radius: 6px;
-    border: 2px solid brown;
+    border: 2px solid #2185C5;
     height: 150px;
     width: 150px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
+    cursor:pointer;
 }
 #gameSpace{
     width: 60%;
@@ -21,7 +23,8 @@ canvas{
     margin: 15px auto 0px;
     transition: 1s;
     background-color: white;
-    border: 1px solid brown;
+    border: 3px solid #2185C5;
+    border-radius: 6px;
 }
 #result{
     text-align: center;
@@ -33,13 +36,16 @@ canvas{
     transform: translate(-50%,-50%);
     width: 60%;
     height: 200px;
-    border: 2px solid brown;
-    background-color: beige;
+    border: 2px solid #2185C5;
+    background-color: rgb(126,206,253);
     border-radius: 10px;
     margin: auto;
     animation: drop 1s linear forwards;
 }
 
+#result h2{
+    margin-top: 50px;
+}
 @keyframes drop{
     0% {top: -100%}
     100%{top:50%}
